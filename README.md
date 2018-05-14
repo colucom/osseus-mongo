@@ -14,7 +14,7 @@ config should have a "get" function which receives the key name and returns the 
 
 * OSSEUS_MONGO_URI
 * OSSEUS_MONGO_USER
-* OSSEUS_MONGO_PASS: ''
+* OSSEUS_MONGO_PASS
 
 ## License
 Code released under the [MIT License](https://github.com/colucom/osseus-mongo/blob/master/LICENSE).
