@@ -2,19 +2,20 @@
 
 # Osseus Mongo
 
-Osseus [mongoose](http://mongoosejs.com/) based [mongodb](https://www.mongodb.com/) connection
+[mongoose](http://mongoosejs.com/) based osseus [mongodb](https://www.mongodb.com/) connection module
 
-### Install
+## Install
 ```bash
 $ npm install osseus-mongo
 ```
 
-#### Config
-config should have a "get" function which receives the key name and returns the value
+## Usage
 
-* OSSEUS_MONGO_URI
-* OSSEUS_MONGO_USER
-* OSSEUS_MONGO_PASS
+#### Configuration
+
+* `OSSEUS_MONGO_URI`
+* `OSSEUS_MONGO_USER` - if needed
+* `OSSEUS_MONGO_PASS` - if needed
 
 ## License
 Code released under the [MIT License](https://github.com/colucom/osseus-mongo/blob/master/LICENSE).

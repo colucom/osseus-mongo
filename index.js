@@ -1,15 +1,12 @@
 const path = require('path')
 
-const init = async function (osseus) {
-  const mongo = require(path.join(__dirname, '/lib/mongo'))
-  return mongo(osseus.config)
-}
-
-const start = async function () {
-
+const init = async (osseus) => {
+  return new Promise(async (resolve, reject) => {
+    const mongo = await require(path.join(__dirname, '/lib/mongo'))(osseus.config)
+    resolve(mongo)
+  })
 }
 
 module.exports = {
-  init: init,
-  start: start
+  init: init
 }
