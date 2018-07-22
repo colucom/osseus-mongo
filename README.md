@@ -13,9 +13,16 @@ $ npm install osseus-mongo
 
 #### Configuration
 
-* `OSSEUS_MONGO_URI`
-* `OSSEUS_MONGO_USER` - if needed
-* `OSSEUS_MONGO_PASS` - if needed
+* `OSSEUS_MONGO_URI` - connection uri string
+* `OSSEUS_MONGO_OPTIONS` - connection options object, default is:
+```json
+{
+  "keepAlive": 1,
+  "connectTimeoutMS": 30000,
+  "socketTimeoutMS": 30000,
+  "useMongoClient": true
+}
+```
 
 ## License
 Code released under the [MIT License](https://github.com/colucom/osseus-mongo/blob/master/LICENSE).
