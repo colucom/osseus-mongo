@@ -24,5 +24,8 @@ $ npm install osseus-mongo
 }
 ```
 
+## Contributing
+Please see [contributing guidelines](https://github.com/colucom/osseus-mongo/blob/master/.github/CONTRIBUTING.md).
+
 ## License
 Code released under the [MIT License](https://github.com/colucom/osseus-mongo/blob/master/LICENSE).
