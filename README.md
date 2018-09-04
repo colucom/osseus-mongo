@@ -27,35 +27,35 @@ $ npm install osseus-mongo
 #### Simple usage
 
 * Configuration file / secret: `OSSEUS_MONGO_URI: 'mongodb://<mongosever>:<port>/<databasename>'`
-* Model file (example: models/User.js): 
+* Model file (example: models/_**MyModel**_.js): 
 ```javascript
 module.exports = (osseus) => {
     const db = osseus.mongo
     const mongoose = osseus.mongo.mongoose
     const Schema = mongoose.Schema
 
-    const userSchema = new Schema({
+    const myModelSchema = new Schema({
         name: String
     });
-    const User = db.model('User', userSchema)
+    const MyModel = db.model('MyModel', myModelSchema)
     
-    osseus.mongo.myModels = osseus.mongo.myModels || {}
-    osseus.mongo.myModels.User = User
+    osseus.mongo.appModels = osseus.mongo.appModels || {}
+    osseus.mongo.appModels['MyModel'] = MyModel
 }
 ```
-* Require model after osseus init: `require('./models/User')(osseus);`
-* Controller file:
+* Require model after osseus init: `require('./models/MyModel')(osseus);`
+* You can access models by osseus.mongo.appModels['_**modelName**_'] from anywhere in the application. For example:
 ```javascript
 module.exports = (osseus) => {
     return {
         examplePOST: (req, res, next) => {
-            const newUser = new osseus.mongo.myModels.User({
+            const newMyModel = new osseus.mongo.appModels.MyModel({
                 name: 'Someone'
             })
 
-            newUser.save()
+            newMyModel.save()
                 .then(() => {
-                    console.log('User successfully saved')
+                    console.log('Document successfully saved')
                 })
                 .catch(err => {
                     throw err
