@@ -1,5 +1,5 @@
 {
-  "name": "osseus-mongo",
+  "name": "@colucom/osseus-mongo",
   "version": "0.2.1",
   "description": "Osseus mongo",
   "scripts": {
