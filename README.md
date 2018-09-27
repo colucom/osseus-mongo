@@ -6,7 +6,7 @@
 
 ## Install
 ```bash
-$ npm install osseus-mongo
+$ npm install @colucom/osseus-mongo
 ```
 
 ## Usage
