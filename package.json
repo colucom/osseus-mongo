@@ -1,6 +1,6 @@
 {
   "name": "@colucom/osseus-mongo",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "Osseus mongo",
   "scripts": {
     "build": "npm install",
@@ -14,7 +14,7 @@
   "author": "LiorRabin",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^4.0.0"
+    "mongoose": "~5.4.0"
   },
   "devDependencies": {
     "standard": "^11.0.1"
