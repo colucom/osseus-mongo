@@ -1,6 +1,6 @@
 {
   "name": "@colucom/osseus-mongo",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Osseus mongo",
   "scripts": {
     "build": "npm install",
